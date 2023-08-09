@@ -23,10 +23,6 @@ Post.init(
         key: 'id',
       },
     },
-    post_date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
     content: {
       type: DataTypes.TEXT,
       allowNull: false,
