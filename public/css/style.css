@@ -57,12 +57,12 @@ main {
   border: 3px solid var(--main-color);
 }
 
-.card a {
+#post-link {
   text-decoration: none;
   color: black;
 }
 
-.card a > * {
+.card > * {
   padding: 10px 20px;
 }
 
@@ -75,6 +75,28 @@ main {
   color: var(--card-header-color);
 }
 
-.post-content {
+.card-content {
   min-height: 75px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.form-group > * {
+  margin: 2px 0;
+}
+
+.form-input,
+#login-btn,
+#signup-btn {
+  height: 30px;
+}
+
+#signup-link,
+#login-link {
+  display: contents;
+  color: black;
 }
