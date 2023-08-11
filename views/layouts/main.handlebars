@@ -11,8 +11,11 @@
     <div id="nav-links">
       <a href="/" id="home">Home</a>
       <a href="/dashboard" id="dashboard">Dashboard</a>
+      {{#if loggedIn}}
+      <button class="btn" id="logout">Logout</button>
+      {{else}}
       <a href="/login" id="login">Login</a>
-      <button id="logout">Logout</button>
+      {{/if}}
     </div>
     <div id="title">
       <h1>The Tech Blog</h1>
@@ -21,5 +24,9 @@
   <main>
     {{{body}}}
   </main>
+
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>
