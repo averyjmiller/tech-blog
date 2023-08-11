@@ -89,9 +89,7 @@ main {
   margin: 2px 0;
 }
 
-.form-input,
-#login-btn,
-#signup-btn {
+.form-input {
   height: 30px;
 }
 
@@ -99,4 +97,66 @@ main {
 #login-link {
   display: contents;
   color: black;
+}
+
+.post-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card-header-color);
+  height: 50px;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#newpost {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 150%;
+  width: 200px;
+  height: 75px;
+}
+
+#newpost:hover {
+  cursor: pointer;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-form > * {
+  margin: 5px 0;
+
+}
+
+#form-title {
+  height: 30px;
+  padding: 10px;
+}
+
+#form-content {
+  resize: none;
+  height: 100px;
+  padding: 10px;
+}
+
+.submit-btn {
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--card-header-color);
+  font-size: 125%;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
 }
