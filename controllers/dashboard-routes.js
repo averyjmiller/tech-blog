@@ -11,8 +11,16 @@ router.get('/', async (req, res) => {
       ],
     });
 
+    if(!userData) {
+      res.render('login');
+      return;
+    }
+
     const user = userData.get({ plain: true });
-    res.render('dashboard', { user });
+    res.render('dashboard', { 
+      user,
+      loggedIn: req.session.loggedIn, 
+    });
   } catch(err) {
     console.log(err);
     res.status(500).json(err);
