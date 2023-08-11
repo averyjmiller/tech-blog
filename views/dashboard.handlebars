@@ -1,0 +1,29 @@
+<div class="posts">
+{{#each user.posts as |post|}}
+  <a href="/post/{{id}}" id="post-link">
+    <div class="post-group">
+      <div class="title">{{title}}</div>
+      <div class="date">{{createdAt}}</div>
+    </div>
+  </a>
+{{/each}}
+</div>
+<div class="new-post hidden">
+  <section class="card">
+    <div class="card-header">
+      <h3 class="card-title">New Post</h3>
+    </div>
+    <div class="card-content">
+      <form class="post-form">
+        <label for="form-title">Title</label>
+        <input type="text" id="form-title">
+        <label for="form-content">Content</label>
+        <textarea id="form-content"></textarea>
+        <button class="submit-btn" id="create-btn" type="submit">Create</button>
+      </form>
+    </div>
+  </section>
+</div>
+<button id="newpost">+ New Post</button>
+
+<script src="./js/create.js"></script>
