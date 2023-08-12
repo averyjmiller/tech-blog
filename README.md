@@ -21,7 +21,8 @@ A CMS-style blog site where developers can publish their blog posts and comment 
 ## Usage
 Visit the deployed application [here](https://fathomless-ravine-36365-381b5242e570.herokuapp.com/).
 
-![14-mvc-homework-demo-01](https://github.com/averyjmiller/tech-blog/assets/54604339/59202a75-e852-444e-8dd5-99e7f50c6c45)
+![techblog](https://github.com/averyjmiller/tech-blog/assets/54604339/23138c9a-fd22-432b-bf46-0a50de6a27ce)
+
 
 ## License
 This repository is covered under MIT License. For more information, check the `LICENSE` file.
