@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Comment } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -32,6 +32,10 @@ router.get('/post/:id', async (req, res) => {
         {
           model: User,
         },
+        {
+          model: Comment,
+          include: [User],
+        },
       ],
     });
 
@@ -42,9 +46,8 @@ router.get('/post/:id', async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-    res.render('homepage', {
+    res.render('post', {
       post,
-      singleQuery: true,
     });
   } catch (err) {
     console.log(err);
