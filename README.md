@@ -20,6 +20,7 @@ A CMS-style blog site where developers can publish their blog posts and comment 
 
 ## Usage
 Visit the deployed application [here](https://fathomless-ravine-36365-381b5242e570.herokuapp.com/).
+
 ![14-mvc-homework-demo-01](https://github.com/averyjmiller/tech-blog/assets/54604339/59202a75-e852-444e-8dd5-99e7f50c6c45)
 
 ## License
