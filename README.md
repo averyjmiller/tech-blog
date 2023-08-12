@@ -19,7 +19,7 @@ A CMS-style blog site where developers can publish their blog posts and comment 
 5. Run the command `npm start` to start the application's server.
 
 ## Usage
-Visit the deployed application [here]().
+Visit the deployed application [here](https://fathomless-ravine-36365-381b5242e570.herokuapp.com/).
 
 ## License
 This repository is covered under MIT License. For more information, check the `LICENSE` file.
