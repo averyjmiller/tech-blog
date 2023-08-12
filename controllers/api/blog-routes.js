@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-router.post('/create', async (req, res) => {
+router.post('/create', withAuth, async (req, res) => {
   try {
     const postData = await Post.create({
       author_id: req.session.userID,
@@ -16,7 +17,7 @@ router.post('/create', async (req, res) => {
   }
 });
 
-router.post('/comment', async (req, res) => {
+router.post('/comment', withAuth, async (req, res) => {
   try {
     const commentData = await Comment.create({
       author_id: req.session.userID,
@@ -31,7 +32,7 @@ router.post('/comment', async (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.update({
       title: req.body.title,
