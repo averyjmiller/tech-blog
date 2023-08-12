@@ -27,4 +27,27 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id);
+
+    if(!postData) {
+      res.status(404).json({ message: 'Could not find post with that id!' });
+      return;
+    }
+
+    const updatePost = postData.get({ plain: true });
+
+    console.log(updatePost);
+
+    res.render('dashboard', {
+      updatePost,
+      update: true,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

@@ -139,7 +139,8 @@ main {
 }
 
 #form-title {
-  height: 30px;
+  resize: none;
+  height: 40px;
   padding: 10px;
 }
 
