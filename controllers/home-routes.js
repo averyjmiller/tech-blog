@@ -25,6 +25,33 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/post/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+        },
+      ],
+    });
+
+    if(!postData) {
+      res.status(404).json({ message: 'Could not find post with that id!' });
+      return;
+    }
+
+    const post = postData.get({ plain: true });
+
+    res.render('homepage', {
+      post,
+      singleQuery: true,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get('/login', (req, res) => {
   if(req.session.logged_in) {
     res.redirect('/');
