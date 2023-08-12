@@ -43,6 +43,7 @@ router.get('/:id', async (req, res) => {
     res.render('dashboard', {
       updatePost,
       update: true,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);
